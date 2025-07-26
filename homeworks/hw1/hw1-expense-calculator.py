@@ -1,4 +1,11 @@
-#Calculate monthly budget and saving
+""""
+Personal Finance Calculator
+Student : Chinawut Sansiri
+Date : 27/07/68
+Purpose : Calculator monthly budget and savings
+"""
+
+#input รับค่าจากผู้ใช้
 income = float(input("User's monthly income in THB: "))
 rent = float(input("Monthly rent/housing cost: "))
 food = float(input("Monthly food budget in THB: "))
@@ -7,6 +14,7 @@ entertainment = float(input("Monthly entertainment budget: "))
 emergency_percent = float(input("Percentage to save for emergency: "))
 investment_percent = float(input("Percent to invest: "))
 
+#Calculate คำนวณค่าใช้จ่ายและเงินออม
 total_fixed = rent + transportation
 total_variable = food + entertainment 
 total_expenses = total_fixed + total_variable
@@ -16,6 +24,7 @@ investment = income * (investment_percent/100)
 available_saving = remaining_income - emergencyfund - investment
 expense_ratio = (total_expenses/income)*100
 
+#output แสดงผลงบและการออม
 print(f"=== MONTHLY BUDGET REPOST ===")
 print(f"Income: {income:.2f} THB")
 print(f"Fixed Expenses: {total_fixed:.2f} THB")
